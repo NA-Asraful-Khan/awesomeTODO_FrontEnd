@@ -6,7 +6,7 @@ const TodoComp = () => {
     const [text,setText] = useState("")
     const dispatch = useDispatch();
     const onFormSubmit = (e)=>{
-        console.log(e.preventDefault())
+      e.preventDefault()
         dispatch(addNewTodo(text))
 
     }

@@ -1,13 +1,14 @@
 import axios from 'axios'
-import { ADDNEW_TODO } from './type'
+import { ADDNEW_TODO } from './type.js'
 
-const API_URL = 'http://localhost:8000/'
+const API_URL = 'http://localhost:8000'
 
 export const addNewTodo=(data)=> async(dispatch)=>{
     try {
-        const res = await axios.post(`${API_URL}/todo`,{data})
-        dispatch({type:ADDNEW_TODO, paylode:res.data})
+        const res = await axios.post(`${API_URL}/todos`, { data });
+
+        dispatch({ type: ADDNEW_TODO , payload: res.data });
     } catch (error) {
-        console.log(error)
+        console.log(error.message);
     }
 }
