@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { ADDNEW_TODO, DELETE_TODO, GETALL_TODO, TOGGLE_TAB, TOGGLE_TODO, UPDATE_TODO } from './type.js'
 
-const API_URL = 'http://localhost:8000'
+const API_URL = 'https://awesome-todo-server.vercel.app'
 
 export const addNewTodo=(data)=> async(dispatch)=>{
     try {
