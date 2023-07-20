@@ -23,3 +23,25 @@ header h1{
   border-bottom: 1px solid #2c3e50;
   padding: 5px;
 }
+
+.task{
+  background-color: #34495e;
+  padding: 15px;
+  margin: 5px;
+  list-style-type: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task span{
+  color: white;
+}
+
+.icon{
+  float: right;
+  margin-right: 20px;
+}
+
+article{
+  display: grid;
+}

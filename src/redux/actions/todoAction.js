@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { ADDNEW_TODO } from './type.js'
+import { ADDNEW_TODO, GETALL_TODO, TOGGLE_TODO } from './type.js'
 
 const API_URL = 'http://localhost:8000'
 
@@ -17,7 +17,17 @@ export const getAllTodo=(data)=> async(dispatch)=>{
     try {
         const res = await axios.get(`${API_URL}/todos`);
 
-        // dispatch({ type: ADDNEW_TODO , payload: res.data });
+        dispatch({ type: GETALL_TODO , payload: res.data });
+    } catch (error) {
+        console.log("Error while calling GetAllTodos",error.message);
+    }
+}
+
+export const toggleTodo=(id)=> async(dispatch)=>{
+    try {
+        const res = await axios.get(`${API_URL}/todos/${id}`);
+
+        dispatch({ type: TOGGLE_TODO , payload: res.data });
     } catch (error) {
         console.log("Error while calling GetAllTodos",error.message);
     }
