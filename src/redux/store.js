@@ -4,9 +4,11 @@ import {composeWithDevTools} from 'redux-devtools-extension'
 
 import thunk from 'redux-thunk'
 import { todosReducers } from './reducers/todoReducer'
+import { tabReducers } from './reducers/tabReducers'
 
 const reducer = combineReducers({
-    todos: todosReducers
+    todos: todosReducers,
+    currentTab:tabReducers
 })
 const middleware = [thunk]
 const store= createStore(

@@ -31,10 +31,15 @@ header h1{
   list-style-type: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: 500;
+  height: 20px;
+  font-size: larger;
 }
 
 .task span{
-  color: white;
+  color: #ffffff;
+  font-weight: bold;
+  
 }
 
 .icon{
@@ -44,4 +49,40 @@ header h1{
 
 article{
   display: grid;
+}
+
+.editTodo{
+  width: 85%;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ffffff;
+  
+}
+
+button{
+  margin:0 10px;
+  padding: 10px;
+  font-size: 14px;
+  color: #6c6777;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.selected{
+  background-color: #6c6777;
+  color: #ffffff;
+}
+
+.clear{
+  float: right;
+  color: #ffffff;
+  background-color: #ee1630;
+  width: 170px;
 }
